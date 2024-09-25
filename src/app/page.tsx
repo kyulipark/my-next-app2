@@ -1,8 +1,16 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return (
-    <div>안녕하세요, Nest.js 입니다!
-    </div>
-  );
+import { useRouter } from "next/navigation";
+
+export default function Test () {
+	const router = useRouter();
+	
+	const handleButtonClick = () => {
+setTimeout(()=>{
+  router.push("/test");
+}, 1000)
+	
+	}
+
+	return <button onClick={handleButtonClick}>클릭!</button>
 }

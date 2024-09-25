@@ -1,5 +1,9 @@
 // src>app>test>page.tsx
+import { Metadata } from "next";
 import React from "react";
+
+
+
 
 const TestPage = () => {
   return (
