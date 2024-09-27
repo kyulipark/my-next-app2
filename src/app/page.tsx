@@ -4,7 +4,8 @@ import ProductList from "./_components/ProductList";
 export default async function Home(){
 
 return(
-	<div>
+	<div className="p-8 m-4">
+	<h1>Sparta shop</h1>
 		<ProductList />
   </div>
   )

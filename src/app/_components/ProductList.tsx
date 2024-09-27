@@ -1,27 +1,41 @@
 
 "use client"
 
-import React, { useEffect, useState } from "react"
+// import React, { useEffect, useState } from "react"
 import { product } from "../page"
 
 
-const fetchData = async () =>{
+// const fetchData =  () =>{
+    // const res = await fetch("http://localhost:4000/products",{
+    //     cache: "force-cache",
+    // })
+    // const data: product[] = await res.json()
+//     return data;
+// }
+
+
+const ProductList = async() => {
     const res = await fetch("http://localhost:4000/products",{
         cache: "force-cache",
     })
     const data: product[] = await res.json()
-    return data
-}
+// }
 
 
-const ProductList = () => {
+// const [isLoading, setIsLoading] = useState()
+// const [data, setData] = useState<product[]>([])
+// useEffect(()=>{
+//     setIsLoading(true)
+//     fetch("http://localhost:4000/products")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         setData(data)
+//         setIsLoading(false)
+//     })
+// },[])
 
-const [data, setData] = useState<product[]>([])
-useEffect(()=>{
-    console.log("render")
-    fetchData(). then(setData)
-},[])
 
+// if(isLoading) return <>Loading...</>
 
     return(
 <div>
