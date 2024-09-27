@@ -1,6 +1,57 @@
-"use client";
-import { useEffect } from "react";
-import ClientExample from "./component/ClientExample";
+import ProductList from "./_components/ProductList";
+
+//SSG
+export default async function Home(){
+
+return(
+	<div>
+		<ProductList />
+  </div>
+  )
+}
+
+export type product = {
+	id: number;
+	handle: string;
+	availableForSale: boolean;
+	isNew: boolean;
+	title: string;
+	description: string;
+	descriptionHtml: string;
+	options: {
+	  name: string;
+	  values: string[];
+	}[];
+	price: {
+	  amount: string;
+	  currencyCode: string;
+	};
+	images: string;
+	seo: {
+	  title: string;
+	  description: string;
+	};
+	tags: string[];
+	rating: number;
+  };
+
+// "use client";
+// import { useEffect } from "react";
+// import ClientExample from "./component/ClientExample";
+
+
+// export default function Home() {
+
+// 	useEffect(()=>{
+// 		console.log("안녕, 난 클라이언트 컴포넌트야.")
+// 	},[])
+
+// 	return <div className="p-8 m-4"> 안녕하세요! Next.js 입니다. 
+// 	<ClientExample />
+// 	</div>
+// }
+
+
 
 // import { useRouter } from "next/navigation";
 
@@ -16,11 +67,3 @@ import ClientExample from "./component/ClientExample";
 
 // 	return <button onClick={handleButtonClick}>클릭!</button>
 // }
-
-export default function Home() {
-	console.log("안녕, 난 클라이언트 컴포넌트야.")
-
-	return <div className="p-8 m-4"> 안녕하세요! Next.js 입니다. 
-	<ClientExample />
-	</div>
-}
